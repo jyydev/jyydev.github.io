@@ -1,7 +1,14 @@
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    $.getJSON("/json/test.json", function(json){
+      console.log(json);
+      document.getElementById('result').innerHTML = JSON.stringify(json);
+    });
   </head>
   <body>
-    <h1> Good morning, welcome to jyydev.github.io :)
+    <h1> Good morning, welcome to jyydev.github.io :)</h1>
+    <button onclick="test()">test</button>
+    <div id="result">test</div>
   </body>
 </html>
