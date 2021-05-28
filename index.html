@@ -2,8 +2,11 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+      //var jsonFile = '/json/test.json';
+      //var jsonFile = '/json/bbedit.json';
+      var jsonFile = 'https://raw.githubusercontent.com/peropyict/html5/master/json/customerdetails.json';
       function test(){
-        $.getJSON("/json/test.json", function(json){
+        $.getJSON(jsonFile, function(json){
           console.log(json);
           document.getElementById('result').innerHTML = JSON.stringify(json);
         });
