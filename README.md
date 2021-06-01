@@ -1,13 +1,5 @@
 ## Welcome to GitHub Pages
 
-[Link](https://github.com/jyydev/jyydev.github.io)
-[link](https://github.com/jyydev/jyydev.github.io)
-
-![image](https://store-images.s-microsoft.com/image/apps.14591.9a19b1cb-7ffc-4b32-bf97-25ef75ec69a3.753de052-0f07-4e5e-a20d-e4d5688136af.e2247862-7caa-44e8-8915-ca934ab9b663.png)
-
-![Image](https://store-images.s-microsoft.com/image/apps.14591.9a19b1cb-7ffc-4b32-bf97-25ef75ec69a3.753de052-0f07-4e5e-a20d-e4d5688136af.e2247862-7caa-44e8-8915-ca934ab9b663.png)
-
-
 Welcome.
 
 You can use the [editor on GitHub](https://github.com/jyydev/jyydev.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
