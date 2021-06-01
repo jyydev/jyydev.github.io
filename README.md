@@ -8,38 +8,10 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Markdown
 
-**Bold**
-_Italic_
-
-_Italic2_
-
-link
-[Link](https://github.com/jyydev/jyydev.github.io)
-
-# Header 1
-## Header 2
-### Header 3
-
-img1
-![Image](https://store-images.s-microsoft.com/image/apps.14591.9a19b1cb-7ffc-4b32-bf97-25ef75ec69a3.753de052-0f07-4e5e-a20d-e4d5688136af.e2247862-7caa-44e8-8915-ca934ab9b663.png)
-
-```markdown
-test
 ```
-
-`code`
-
-```abc
+aaa
 ttt
 ```
-
-``markdown
-tt
-``
-
-`markdown
-t
-`
 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
