@@ -1,10 +1,5 @@
 ## Welcome to GitHub Pages
 
-
-tt12aaa
-
-Test from play.js on ipad.
-
 Welcome.
 
 You can use the [editor on GitHub](https://github.com/jyydev/jyydev.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
