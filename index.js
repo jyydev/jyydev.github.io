@@ -7,9 +7,6 @@ http.createServer((req,res)=>{
     res.write(data);
     return res.end();
   })
-//    res.write("Hello World from index.js, jyydev.github.io");
-//    res.end();
-
 }).listen(80);
 
 console.log('running on port: '+process.env.PORT);

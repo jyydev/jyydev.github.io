@@ -3,6 +3,9 @@
   "name": "jyydev.github.com",
   "version": "1.0.0",
   "scripts": {
-    "start": "node index.js"
+    "start": "http-server"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3"
   }
 }
