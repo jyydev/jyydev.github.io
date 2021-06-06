@@ -21,7 +21,7 @@
     <script>
       var api = "https://api.github.com/repos/jyydev/jyydev.github.io/contents/";
       //var api = "https://api.github.com/repos/jyydev/img/contents/";
-      var root = "https://jyydev.github.io/"
+      const root = "https://jyydev.github.io/"
       var items = [];
       $.ajaxSetup({
         async: false
@@ -41,7 +41,7 @@
           $.each(data, function(key, d) {
             if (d.type == "dir") path = d.path + '/';
             else path = d.path
-            item = "<li>" + "<a href=\"" + url + path + "\">" + path + "</a></li>"
+            item = "<li>" + "<a href=\"" + root + path + "\">" + path + "</a></li>"
             log(item);
             items.push(item);
 
