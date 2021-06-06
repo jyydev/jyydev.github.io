@@ -9,4 +9,4 @@ http.createServer((req,res)=>{
   })
 }).listen(80);
 
-console.log('running on port: '+process.env.PORT);
+console.log('default port: '+process.env.PORT);
