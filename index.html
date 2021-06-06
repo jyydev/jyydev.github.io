@@ -19,21 +19,19 @@
   </script>
 
   <script>
+    var api = "https://api.github.com/repos/jyydev/jyydev.github.io/contents/";
+    //var api = "https://api.github.com/repos/jyydev/img/contents/";
+    var root = "https://jyydev.github.io/"
+    var items = [];
     bug = z => document.write(z)
-    //var api = "https://api.github.com/repos/jyydev/jyydev.github.io/contents/";
     log = z => console.log(z)
     $.ajaxSetup({
       async: false
     });
 
-    var api = "https://api.github.com/repos/jyydev/img/contents/";
-    var root = "https://jyydev.github.io/"
-    var items = [];
-
     function tree(folder = '') {
       url = api + folder
       log(url)
-
 
       $.getJSON(url, function (data) {
         var path;
@@ -52,7 +50,6 @@
             tree(d.path)
             items.push('</ul>')
           }
-
 
         });
 
