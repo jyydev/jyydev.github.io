@@ -1,108 +1,100 @@
 <html>
 
-<head>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-icon" sizes="128x128" href="github.png">
-  <link rel="icon" sizes="192x192" href="github.png">
+  <head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="128x128" href="github.png">
+    <link rel="icon" sizes="192x192" href="github.png">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    var jsonFile = 'https://raw.githubusercontent.com/peropyict/html5/master/json/customerdetails.json';
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      var jsonFile = 'https://raw.githubusercontent.com/peropyict/html5/master/json/customerdetails.json';
 
-    function test() {
-      $.getJSON(jsonFile, function (json) {
-        console.log(json);
-        document.getElementById('result').innerHTML = JSON.stringify(json);
+      function test() {
+        $.getJSON(jsonFile, function(json) {
+          console.log(json);
+          document.getElementById('result').innerHTML = JSON.stringify(json);
+        });
+      }
+
+    </script>
+
+    <script>
+      var api = "https://api.github.com/repos/jyydev/jyydev.github.io/contents/";
+      //var api = "https://api.github.com/repos/jyydev/img/contents/";
+      var root = "https://jyydev.github.io/"
+      var items = [];
+      $.ajaxSetup({
+        async: false
       });
-    }
-
-  </script>
-
-  <script>
-    var api = "https://api.github.com/repos/jyydev/jyydev.github.io/contents/";
-    //var api = "https://api.github.com/repos/jyydev/img/contents/";
-    var root = "https://jyydev.github.io/"
-    var items = [];
-    bug = z => document.write(z)
-    log = z => console.log(z)
-    $.ajaxSetup({
-      async: false
-    });
-
-    function tree(folder = '') {
-      url = api + folder
-      log(url)
-
-      $.getJSON(url, function (data) {
-        var path;
-        var item
+      log = z => console.log(z)
+      
+      function tree(folder = '') {
+        url = api + folder
+        log(url)
 
 
-        $.each(data, function (key, d) {
-          if (d.type == "dir") path = d.path + '/';
-          else path = d.path
-          item = "<li>" + "<a href=\"" + url + path + "\">" + path + "</a></li>"
-          log(item);
-          items.push(item);
+        $.getJSON(url, function(data) {
+          var path;
+          var item
 
-          if (d.type == "dir") {
-            items.push('<ul>')
-            tree(d.path)
-            items.push('</ul>')
-          }
+
+          $.each(data, function(key, d) {
+            if (d.type == "dir") path = d.path + '/';
+            else path = d.path
+            item = "<li>" + "<a href=\"" + url + path + "\">" + path + "</a></li>"
+            log(item);
+            items.push(item);
+
+            if (d.type == "dir") {
+              items.push('<ul>')
+              tree(d.path)
+              items.push('</ul>')
+
+            }
+
+          });
 
         });
 
-      });
+        log(items)
+      }
 
-      log(items)
-    }
+    </script>
+  </head>
 
-  </script>
-</head>
+  <body>
+    <h1> Good morning, welcome to jyydev.github.io :)</h1>
+    <h1> T1. Successfully updated from Play.js on iPad :)</h1>
 
-<body>
-  <h1> Good morning, welcome to jyydev.github.io :)</h1>
-  <h1> Successfully updated from Play.js on iPad :)</h1>
+    <hr />
+    <h3>Directory</h3>
+    <div id="tree">
+      tree
+    </div>
+    <script>
+      tree()
+      $("#tree").html(items.join(''));
 
-  <hr />
-  <h3>Directory</h3>
-  <div id="tree">
-    tree
-  </div>
-  <script>
-    tree()
-    $("#tree").html(items);
+    </script>
+    <hr />
 
-  </script>
-  <hr />
+    <div>
+      <li>aa</li>
+      <li>aa</li>
+      <ul>
+        <li>bb</li>
+        <li>bb</li>
+        <li>bb</li>
+      </ul>
+      <li>aa</li>
+      <li>aa</li>
+    </div>
 
-
-  <a href="https://www.google.com" target="_blank">just a link</a><br>
-  <a href="https://www.google.com" target="_blank">test blank href</a><br>
-  <img src="github.png" />
-  <button onclick="test()">test</button>
-  <div id="result">test</div>
-
-
-
-
-
-  <div>
-    <li>aa</li>
-    <li>aa</li>
-    <ul>
-      <li>bb</li>
-      <li>bb</li>
-    </ul>
-    <li>aa</li>
-    <li>aa</li>
-  </div>
-
-
-
-
-
-</body>
+    <a href="https://www.google.com" target="_blank">just a link</a><br>
+    <a href="https://www.google.com" target="_blank">test blank href</a><br>
+    <img src="github.png" />
+    <button onclick="test()">test</button>
+    <div id="result">test</div>
+  </body>
 
 </html>
