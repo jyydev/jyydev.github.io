@@ -21,6 +21,11 @@
     <script>
       var api = "https://api.github.com/repos/jyydev/jyydev.github.io/contents/";
       //var api = "https://api.github.com/repos/jyydev/img/contents/";
+
+var req = new URL(window.location.href);
+var token = req.searchParams.get("access_token");
+
+
       const root = "https://jyydev.github.io/"
       var items = [];
       $.ajaxSetup({
@@ -32,7 +37,7 @@
         url = api + folder
         log(url)
 
-
+        if (token) url += '?access_token='+ token
         $.getJSON(url, function(data) {
           var path;
           var item
